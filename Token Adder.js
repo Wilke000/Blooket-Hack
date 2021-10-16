@@ -6,7 +6,6 @@ async function getName(authToken) {
 };
 
 async function addTokens() {
-    const add_tokens = prompt('How many tokens do you want to add to your account? (500 daily)');
     const myToken = localStorage.token.split('JWT ')[1];
 
     if (add_tokens > 500) {
@@ -28,7 +27,7 @@ async function addTokens() {
     });
 
     if (response.status == 200) {
-        alert(`${add_tokens} added to your account!`);
+        alert(`${500} added to your account!`);
     } else {
         alert('An error occured.');
     };
